@@ -116,7 +116,7 @@ class KubernetesContainerManager(ContainerManager):
         external_node_hosts = []
         for node in nodes.items:
             for addr in node.status.addresses:
-                if addr.type == "ExternalDNS":
+                if addr.type == "ExternalIP":
                     external_node_hosts.append(addr.address)
         if len(external_node_hosts) == 0:
             msg = "Error connecting to Kubernetes cluster. No external node addresses found"
