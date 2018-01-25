@@ -139,8 +139,11 @@ function run_integration_tests {
   python ../integration-tests/many_apps_many_models.py 2 3
   python ../integration-tests/deploy_pyspark_models.py
   python ../integration-tests/deploy_pyspark_pipeline_models.py
+  python ../integration-tests/deploy_pyspark_sparkml_models.py
   python ../integration-tests/kubernetes_integration_test.py
+  python ../integration-tests/deploy_tensorflow_models.py
   ../integration-tests/r_integration_test/rclipper_test.sh
+  python ../integration-tests/clipper_metric.py 
 }
 
 function run_all_tests {
